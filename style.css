@@ -1,3 +1,4 @@
+/* Global */
 body {
   display: flex;
   justify-content: center;
@@ -7,15 +8,73 @@ body {
   box-sizing: border-box;
   line-height: 1.5rem;
   text-align: center;
-  color: #222;
+  background-color: #333;
 }
 
-body > * {
-    flex-basis: 25%;
-    height: 10rem;
+/* One */
+#one {
+  flex-basis: 25%;
+  height: 10rem;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translateX(-100%);
     background-color: red;
+  }
+  25% {
+    transform: translateX(0);
+    background-color: blue;
+  }
+  50% {
+    transform: translateX(100%);
+    background-color: green;
+  }
+  75% {
+    transform: translateX(0);
+    background-color: yellow;
+  }
+  100% {
+    transform: translateX(-100%);
+    background-color: red;
+  }
 }
 
-#transform1 {
-    transform: rotate(60deg);
+/* Two */
+#two {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+#twoA {
+  position: absolute;
+  left: -10rem;
+  width: 10rem;
+  height: 100%;
+  background-color: chartreuse;
+}
+
+#two:hover ~ #twoA {
+  animation-name: twoAslide;
+  animation-duration: 2s;
+}
+
+@keyframes twoAslide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
