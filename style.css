@@ -56,25 +56,11 @@ body {
 
 #twoA {
   position: absolute;
-  left: -10rem;
-  width: 10rem;
+  left: -15rem;
+  width: 15rem;
   height: 100%;
   background-color: chartreuse;
-}
-
-#two:hover ~ #twoA {
-  animation-name: twoAslide;
-  animation-duration: 2s;
-}
-
-@keyframes twoAslide {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10rem);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  cursor: pointer;
+  transition-property: transform, background-color;
+  transition-duration: 2s;
 }
