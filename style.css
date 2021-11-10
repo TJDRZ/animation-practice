@@ -48,14 +48,25 @@ body {
   position: absolute;
   top: 1rem;
   left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
   width: 4rem;
-  height: 4rem;
-  background-color: aliceblue;
+  background-color: transparent;
   cursor: pointer;
+}
+
+#two > * {
+  height: 0.5rem;
+  background-color: aliceblue;
+  transition: transform 1s ease-out, background-color 1s ease-in;
+  
 }
 
 #twoA {
   position: absolute;
+  top: 5rem;
   left: -15rem;
   width: 15rem;
   height: 100%;
