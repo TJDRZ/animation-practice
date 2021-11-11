@@ -104,8 +104,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  background-color: #fada5e;
+  background-image: linear-gradient(#fada5e 0%, #000 100%);
   border-radius: 50%;
+  box-shadow: 0.1rem -0.1rem 20px #fada5e;
   opacity: 0;
 }
 
@@ -134,6 +135,7 @@ body {
 
 @keyframes fade {
   50% {
+    box-shadow: 0.1rem -0.1rem 20px #333;
     opacity: 1;
     transform: rotateY(45deg) rotateX(45deg);
   }
