@@ -75,3 +75,66 @@ body {
   transition-property: transform, background-color;
   transition-duration: 2s;
 }
+
+/* Three */
+#three {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
+  width: 10rem;
+  padding: 1rem;
+  border-radius: 50%;
+  animation: flip 8s ease-in-out infinite;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+#three > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: #fada5e;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+#three > * > * {
+  flex-basis: 50%;
+  height: 50%;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+#threeA {
+  animation: fade 4s ease-in-out infinite;
+}
+
+#threeB {
+  animation: fade 4s 1s ease-in-out infinite;
+}
+
+#threeC {
+  animation: fade 4s 3s ease-in-out infinite;
+}
+
+#threeD {
+  animation: fade 4s 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  50% {
+    opacity: 1;
+    transform: rotateY(45deg) rotateX(45deg);
+  }
+}
