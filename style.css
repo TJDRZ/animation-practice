@@ -61,7 +61,6 @@ body {
   height: 0.5rem;
   background-color: aliceblue;
   transition: transform 1s ease-out, background-color 1s ease-in;
-  
 }
 
 #twoA {
@@ -182,5 +181,34 @@ body {
   }
   100% {
     border-radius: 0;
+  }
+}
+
+/* Five */
+#five {
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
+  background-image: url(./lloyd.jpeg);
+  background-position: bottom left;
+  background-size: cover;
+  border: outset 4px #fada5e;
+  animation: resize ease-in-out 5s infinite;
+}
+
+@keyframes resize {
+  0% {
+    width: 20rem;
+    height: 20rem;
+  }
+  50% {
+    width: 5rem;
+    height: 5rem;
+    background-position: 0 -20rem;
+    transform: rotateZ(-45deg) translateX(30rem);
+  }
+  100% {
+    width: 20rem;
+    height: 20rem;
   }
 }
